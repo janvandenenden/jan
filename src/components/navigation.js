@@ -3,11 +3,12 @@ import { Link } from "gatsby"
 
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
+import Container from "react-bootstrap/Container"
 
 const Navigation = () => {
   return (
-    <>
-      <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg">
+      <Container>
         <Link to="/" className="navbar-brand">
           Jan Van den Enden
         </Link>
@@ -28,8 +29,8 @@ const Navigation = () => {
             </Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
-    </>
+      </Container>
+    </Navbar>
   )
 }
 
