@@ -14,9 +14,8 @@ const Hero = () => {
           <Col md={6}>
             <h1 className="display-2">Hi, I am Jan</h1>
             <p>
-              I'm a freelance digital developer interested in data analysis,
-              data visualisation and artificial intelligence. Have fun and check
-              out my projects!
+              I'm a digital developer interested in data analysis, data
+              visualisation and machine learning.
             </p>
             <Link to="/projects" className="btn btn-primary btn-lg mr-2">
               See projects

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jan Van den Enden`,
-    description: `I'm a freelance digital developer interested in data analysis, data visualisation and artificial intelligence. Have fun and check out my projects!`,
+    description: `I'm a digital developer interested in data analysis, data visualisation and deep learning.`,
     author: `@janvandenenden`,
   },
   plugins: [
