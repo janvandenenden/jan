@@ -1,10 +1,27 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
 const About = () => {
+  const data = useStaticQuery(graphql`
+    query Image {
+      aboutme: file(relativePath: { eq: "about-me.jpg" }) {
+        id
+        childImageSharp {
+          fixed(width: 300) {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <Container>
       <h1 className="display-4 text-center mt-4 mb-2">About me</h1>
@@ -22,7 +39,12 @@ const About = () => {
             can find my full resume here.
           </p>
         </Col>
-        <Col></Col>
+        <Col>
+          <Img
+            alt="Jan hiking in New Zealand"
+            fixed={data.aboutme.childImageSharp.fixed}
+          />
+        </Col>
       </Row>
     </Container>
   )

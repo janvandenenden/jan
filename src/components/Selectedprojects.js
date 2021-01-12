@@ -22,7 +22,6 @@ const ProjectInformation = {
     website: "https://supermeme.co",
   },
 }
-console.log(ProjectInformation.mockupmark)
 const Projects = () => {
   return (
     <Container>
