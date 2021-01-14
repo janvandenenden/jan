@@ -1,9 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Selectedprojects from "../components/Selectedprojects"
+import Contact from "../components/Contact"
 import About from "../components/About"
 import SEO from "../components/seo"
 
@@ -15,6 +15,7 @@ const IndexPage = props => {
       <Hero />
       <Selectedprojects />
       <About />
+      <Contact />
     </Layout>
   )
 }
