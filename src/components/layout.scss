@@ -1,0 +1,22 @@
+$primary-color: #e63946;
+$secondary-color: #a8dadc;
+$tertiary-color: #457b9d;
+$light-color: #f1faee;
+$dark-color: #1d3557;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "info": $tertiary-color,
+  "light": $light-color,
+  "dark": $dark-color,
+);
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: "muli";
+  color: $dark-color;
+  background-color: #f1faee;
+}
