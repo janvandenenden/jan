@@ -7,24 +7,24 @@ import Container from "react-bootstrap/Container"
 
 const Navigation = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        <Link to="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand text-light">
           Jan Van den Enden
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Link to="/projects" className="nav-link">
+            <Link to="/projects" className="nav-link text-light">
               Projects
             </Link>
-            <Link to="/about" className="nav-link">
+            <Link to="/about" className="nav-link text-light">
               About
             </Link>
-            <Link to="/contact" className="nav-link">
+            <Link to="/contact" className="nav-link text-light">
               Contact
             </Link>
-            <Link to="/resume" className="nav-link">
+            <Link to="/resume" className="nav-link text-light">
               Resume
             </Link>
           </Nav>
