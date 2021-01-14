@@ -15,7 +15,7 @@ const Hero = () => {
         childImageSharp {
           fluid(
             maxWidth: 2400
-            duotone: { highlight: "#b5179e", shadow: "#480ca8" }
+            duotone: { highlight: "#e63946", shadow: "#1d3557" }
             toFormat: PNG
           ) {
             ...GatsbyImageSharpFluid
@@ -29,19 +29,16 @@ const Hero = () => {
     <BackgroundImage fluid={data.heroImage.childImageSharp.fluid}>
       <Jumbotron style={{ backgroundColor: "transparent" }}>
         <Container>
-          <Row>
-            <Col md={6} className="font-weight-bold text-light">
-              <h1 className="display-2">
-                Hi, <br />I am Jan
+          <Row style={{ minHeight: "80vh" }}>
+            <Col md={6} className="my-auto justify-content-center">
+              <h1 className="display-2 font-weight-bolder text-light">
+                Hi, I am Jan
               </h1>
-              <p>
+              <p className="text-light">
                 I'm a digital developer interested in data analysis, data
                 visualisation and machine learning.
               </p>
-              <Link to="/projects" className="btn btn-primary btn-lg mr-2">
-                See projects
-              </Link>
-              <Link to="/contact" className="btn btn-danger btn-lg">
+              <Link to="/contact" className="btn btn-outline-light btn-lg">
                 Get in touch
               </Link>
             </Col>
