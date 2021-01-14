@@ -24,14 +24,18 @@ const ProjectInformation = {
 }
 const Projects = () => {
   return (
-    <Container>
-      <h1 className="display-4 text-center mt-4 mb-2">Selected work</h1>
-      <p className="text-center small">
-        Projects I have been working on recentely
-      </p>
-      <Project data={ProjectInformation.mockupmark} />
-      <Project data={ProjectInformation.supermeme} />
-    </Container>
+    <div className="py-5">
+      <Container>
+        <h1 className="display-4 text-center mt-4 mb-2 text-dark">
+          Selected work
+        </h1>
+        <p className="text-center small text-dark">
+          Projects I have been working on recently
+        </p>
+        <Project data={ProjectInformation.mockupmark} />
+        <Project data={ProjectInformation.supermeme} />
+      </Container>
+    </div>
   )
 }
 

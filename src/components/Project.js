@@ -8,7 +8,7 @@ import Badges from "./Badges"
 
 const Project = ({ data }) => {
   return (
-    <Row className="my-5 py-4 px-3 bg-light">
+    <Row className="my-5 py-4 px-3 bg-secondary rounded">
       <Col md={{ span: 8, order: 2 }}>
         <h2>{data.title}</h2>
         <p>{data.description}</p>
