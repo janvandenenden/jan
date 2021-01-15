@@ -1,11 +1,11 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
-import Jumbotron from "react-bootstrap/Jumbotron"
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -23,8 +23,7 @@ const Hero = () => {
         }
       }
     }
-  `)
-  console.log(data)
+  `);
   return (
     <BackgroundImage fluid={data.heroImage.childImageSharp.fluid}>
       <Jumbotron style={{ backgroundColor: "transparent" }}>
@@ -46,7 +45,7 @@ const Hero = () => {
         </Container>{" "}
       </Jumbotron>
     </BackgroundImage>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

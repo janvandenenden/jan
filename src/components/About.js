@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -21,8 +21,7 @@ const About = () => {
         }
       }
     }
-  `)
-  console.log(data.aboutme.childImageSharp.fluid.src)
+  `);
   return (
     <div className="py-5">
       <Container>
@@ -54,7 +53,7 @@ const About = () => {
         </Row>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
