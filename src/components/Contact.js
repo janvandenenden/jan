@@ -12,18 +12,21 @@ import Divider from "./Divider";
 
 const Contact = () => {
   return (
-    <div className="py-5">
+    <div className="py-5 bg-light">
       <Container>
         <h1 className="display-4 mt-4 mb-2 text-center text-dark">Contact</h1>
+        <p className="text-center small text-dark">
+          Let's make something great together.
+        </p>
         <Row className="my-5 py-4">
           <Col
             xs={{ order: "last", span: 12 }}
             md={{ order: "first", span: 6 }}
-            className="d-flex flex-column justify-content-center"
+            className="d-flex flex-column justify-content-center mt-5 mt-md-0"
           >
             <p className="lead">
-              Let's make something great! I am looking for a job as a front-end
-              developer and/or digital project manager and/or data scientist.
+              I am looking for a job as a front-end developer and/or digital
+              project manager and/or data scientist.
             </p>
             <Divider text="or contact me on social media" />
             <div className="d-flex justify-content-around mt-3">
@@ -53,7 +56,7 @@ const Contact = () => {
           <Col
             xs={{ order: "first", span: 12 }}
             md={{ order: "last", span: 6 }}
-            className="bg-secondary rounded"
+            className="bg-secondary rounded shadow"
           >
             <Form className="p-3">
               <Form.Group controlId="formBasicPassword">

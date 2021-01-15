@@ -31,7 +31,7 @@ const Hero = () => {
           <Row style={{ minHeight: "80vh" }}>
             <Col md={6} className="my-auto justify-content-center">
               <h1 className="display-2 font-weight-bolder text-light">
-                Hi, I am Jan
+                I am Jan
               </h1>
               <p className="text-light">
                 I'm a digital developer interested in data analysis, data

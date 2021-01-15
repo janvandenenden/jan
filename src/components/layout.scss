@@ -18,5 +18,13 @@ $theme-colors: (
 body {
   font-family: "muli";
   color: $dark-color;
-  background-color: #fff;
+  background-color: $light-color;
+}
+
+.shadow {
+  box-shadow: 2px 2px 5px $dark-color;
+}
+
+h1 {
+  font-weight: 900;
 }

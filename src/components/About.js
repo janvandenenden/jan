@@ -23,9 +23,9 @@ const About = () => {
     }
   `);
   return (
-    <div className="py-5">
+    <div className="py-5 bg-info">
       <Container>
-        <Row className="my-5 bg-dark rounded text-light">
+        <Row className="my-5 bg-dark rounded text-light shadow">
           <Col
             md={6}
             className="my-auto text-left py-5 px-md-5 text-center text-md-left"

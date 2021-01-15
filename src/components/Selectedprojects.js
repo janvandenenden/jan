@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-import Container from "react-bootstrap/Container"
+import Container from "react-bootstrap/Container";
 
-import Project from "./Project"
+import Project from "./Project";
 
 const ProjectInformation = {
   mockupmark: {
@@ -21,7 +21,7 @@ const ProjectInformation = {
     link: "supermeme",
     website: "https://supermeme.co",
   },
-}
+};
 const Projects = () => {
   return (
     <div className="py-5">
@@ -36,7 +36,7 @@ const Projects = () => {
         <Project data={ProjectInformation.supermeme} />
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

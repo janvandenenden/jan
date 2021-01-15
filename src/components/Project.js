@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-import Badges from "./Badges"
+import Badges from "./Badges";
 
 const Project = ({ data }) => {
   return (
-    <Row className="my-5 py-4 px-3 bg-secondary rounded">
+    <Row className="my-5 py-4 px-3 bg-secondary rounded shadow">
       <Col md={{ span: 8, order: 2 }}>
         <h2>{data.title}</h2>
         <p>{data.description}</p>
@@ -19,7 +19,7 @@ const Project = ({ data }) => {
       </Col>
       <Col></Col>
     </Row>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
