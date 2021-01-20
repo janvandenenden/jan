@@ -1,8 +1,8 @@
-$primary-color: #e63946;
-$secondary-color: #e5e5e5;
-$tertiary-color: #457b9d;
-$light-color: #f1faee;
-$dark-color: #1d3557;
+$primary-color: #14213d;
+$secondary-color: #e3ebeb;
+$tertiary-color: #fca311;
+$light-color: #ffffff;
+$dark-color: #000000;
 
 $theme-colors: (
   "primary": $primary-color,
@@ -18,7 +18,7 @@ $theme-colors: (
 body {
   font-family: "muli";
   color: $dark-color;
-  background-color: $light-color;
+  background-color: $secondary-color;
 }
 
 .shadow {
@@ -27,4 +27,28 @@ body {
 
 h1 {
   font-weight: 900;
+}
+
+.custom-shape-divider-bottom-1610988694 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1610988694 svg {
+  position: relative;
+  display: block;
+  width: calc(132% + 1.3px);
+  height: 54px;
+}
+
+.custom-shape-divider-bottom-1610988694 .shape-fill {
+  fill: $primary-color;
+}
+
+.opacity {
+  opacity: 0.4;
 }

@@ -1,13 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Navbar from "react-bootstrap/Navbar"
-import Nav from "react-bootstrap/Nav"
-import Container from "react-bootstrap/Container"
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
 
 const Navigation = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+    <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
       <Container>
         <Link to="/" className="navbar-brand text-light">
           Jan Van den Enden
@@ -31,7 +31,7 @@ const Navigation = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

@@ -15,7 +15,7 @@ const Hero = () => {
         childImageSharp {
           fluid(
             maxWidth: 2400
-            duotone: { highlight: "#e63946", shadow: "#1d3557" }
+            duotone: { highlight: "#e5e5e5", shadow: "#14213d" }
             toFormat: PNG
           ) {
             ...GatsbyImageSharpFluid
@@ -30,14 +30,18 @@ const Hero = () => {
         <Container>
           <Row style={{ minHeight: "80vh" }}>
             <Col md={6} className="my-auto justify-content-center">
-              <h1 className="display-2 font-weight-bolder text-light">
-                I am Jan
+              <h1 className="display-3 font-weight-bolder text-dark">
+                Hi, I am Jan
               </h1>
-              <p className="text-light">
-                I'm a digital developer interested in data analysis, data
-                visualisation and machine learning.
+              <p className="text-dark">
+                I'm a digital developer who likes to create gobsmacking websites
+                and awesome applications.
               </p>
-              <Link to="/contact" className="btn btn-outline-light btn-lg">
+
+              <Link
+                to="/contact"
+                className="btn btn-info btn-lg mt-2 text-light"
+              >
                 Get in touch
               </Link>
             </Col>
