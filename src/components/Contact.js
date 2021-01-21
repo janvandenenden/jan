@@ -57,7 +57,7 @@ const Contact = () => {
             xs={{ order: "first", span: 12 }}
             md={{ order: "last", span: 6 }}
           >
-            <Form className="px-3 py-5 bg-light rounded shadow">
+            <Form className="p-3 bg-light rounded shadow">
               <Form.Group controlId="formBasicInput">
                 <Form.Control placeholder="Name" />
               </Form.Group>

@@ -33,13 +33,12 @@ const Navigation = () => {
         <Link to="/" className="navbar-brand text-light">
           Jan Van den Enden
         </Link>
-
-        <Nav className="ml-auto">
+        <Nav className="ml-auto flex-row">
           <a
             href="https://github.com/janvandenenden"
             target="_blank"
             rel="noreferrer"
-            className="nav-link"
+            className="nav-link ml-2"
           >
             <Github color="#ffffff" size={36} />
           </a>
@@ -47,7 +46,7 @@ const Navigation = () => {
             href="https://www.linkedin.com/in/jan-van-den-enden-410b7820/"
             target="_blank"
             rel="noreferrer"
-            className="nav-link d-inline"
+            className="nav-link ml-2"
           >
             <Linkedin color="#ffffff" size={36} />
           </a>

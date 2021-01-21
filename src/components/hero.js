@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <BackgroundImage
       fluid={data.heroImage.childImageSharp.fluid}
-      style={{ backgroundPosition: "50% 80%" }}
+      style={{ backgroundPosition: "70% 80%" }}
     >
       <Jumbotron style={{ backgroundColor: "transparent" }}>
         <Container>
