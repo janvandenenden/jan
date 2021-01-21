@@ -59,10 +59,15 @@ const Contact = () => {
           >
             <Form
               className="p-3 bg-light rounded shadow"
+              method="POST"
               name="Jan's contact form"
-              ata-netlify="true"
+              data-netlify="true"
             >
-              <input type="hidden" name="Jan's contact form" />
+              <input
+                type="hidden"
+                name="form-name"
+                value="Jan's contact form"
+              />
               <Form.Group controlId="formBasicInput">
                 <Form.Control placeholder="Name" />
               </Form.Group>
