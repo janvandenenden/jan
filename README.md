@@ -1,1 +1,1 @@
-<h1>Welcome to Jan's webbsite</h1>
+<h1>Welcome to Jan's website - WIP</h1>

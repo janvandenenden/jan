@@ -12,8 +12,20 @@ const Project = ({ data, image }) => {
   return (
     <Row className="my-5 py-4 px-3 bg-light rounded shadow mx-1 mx-md-0">
       <Col
+        xs={{ span: 12, order: 1 }}
+        md={{ span: 6, order: 1 }}
+        className="my-auto"
+      >
+        <Img
+          alt={`Mockup of ${data.title} website on macbook and Iphone`}
+          fluid={image}
+          className="rounded"
+        />
+      </Col>
+      <Col
+        xs={{ span: 12, order: 2 }}
         md={{ span: 6, order: 2 }}
-        className="d-flex flex-column justify-content-center"
+        className="d-flex flex-column justify-content-center text-center text-md-left"
       >
         <h2>{data.title}</h2>
         <div>
@@ -34,13 +46,6 @@ const Project = ({ data, image }) => {
         >
           Visit website <ArrowRight color="#fca311" size={24} />
         </a>
-      </Col>
-      <Col md={{ span: 6, order: 1 }} className="my-auto">
-        <Img
-          alt={`Mockup of ${data.title} website on macbook and Iphone`}
-          fluid={image}
-          className="rounded"
-        />
       </Col>
     </Row>
   );

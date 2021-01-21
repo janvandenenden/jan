@@ -25,13 +25,17 @@ const Hero = () => {
     }
   `);
   return (
-    <BackgroundImage fluid={data.heroImage.childImageSharp.fluid}>
+    <BackgroundImage
+      fluid={data.heroImage.childImageSharp.fluid}
+      style={{ backgroundPosition: "50% 80%" }}
+    >
       <Jumbotron style={{ backgroundColor: "transparent" }}>
         <Container>
           <Row style={{ minHeight: "80vh" }}>
             <Col md={6} className="my-auto justify-content-center">
-              <h1 className="display-3 font-weight-bolder text-dark">
-                Hi, I am Jan
+              <h1 className="display-3 font-weight-bold text-primary">
+                Hi, <br class="d-md-none"></br>I am{" "}
+                <span className="font-weight-bolder">Jan</span>
               </h1>
               <p className="text-dark">
                 I'm a digital developer who likes to create gobsmacking websites
@@ -39,14 +43,14 @@ const Hero = () => {
               </p>
 
               <Link
-                to="/contact"
+                to="/#contact"
                 className="btn btn-info btn-lg mt-2 text-light"
               >
                 Get in touch
               </Link>
             </Col>
           </Row>
-        </Container>{" "}
+        </Container>
       </Jumbotron>
     </BackgroundImage>
   );

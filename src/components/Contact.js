@@ -12,7 +12,7 @@ import Divider from "./Divider";
 
 const Contact = () => {
   return (
-    <div className="py-5 bg-tertiary">
+    <div className="py-5 bg-tertiary" id="contact">
       <Container>
         <h1 className="display-4 mt-4 mb-2 text-center text-dark">Contact</h1>
         <p className="text-center small text-dark">
@@ -56,9 +56,8 @@ const Contact = () => {
           <Col
             xs={{ order: "first", span: 12 }}
             md={{ order: "last", span: 6 }}
-            className="bg-light rounded shadow"
           >
-            <Form className="px-3 py-5">
+            <Form className="px-3 py-5 bg-light rounded shadow">
               <Form.Group controlId="formBasicInput">
                 <Form.Control placeholder="Name" />
               </Form.Group>
