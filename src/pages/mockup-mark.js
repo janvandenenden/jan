@@ -57,6 +57,7 @@ const MockupMark = (props) => {
               print-on-demand store owners want to spend time creating designs,
               optimising their stores and building their audiences.
             </p>
+            <h4>Problem</h4>
             <p>
               For every design created, store owners need images to promote
               their products on their website and social media. One way to
@@ -68,6 +69,7 @@ const MockupMark = (props) => {
               have the knowhow and don’t need to create many mockups, but
               remains a frustrating and time consuming process…
             </p>
+            <h4>Solution</h4>
             <p>
               Wouldn’t it be great if you can just upload your design in your
               browser, apply it to hundreds of curated images and download your
@@ -87,9 +89,23 @@ const MockupMark = (props) => {
             <h4>Technology</h4>
             <p>
               Mockup Mark is build with React.js, Node.js, Sass and ImageMagick,
-              uses Stripe for payments and is hosted on Heroku (web server) and
-              Amazon Web Services (image generation).
+              uses Stripe as a payment provider and is hosted on Heroku (web
+              server) and Amazon Web Services (image generation).
             </p>
+            <a
+              href="https://mockupmark.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-info"
+            >
+              Visit website
+            </a>
+          </Col>
+          <Col>
+            <Img
+              alt={`Mockup of  website on macbook and Iphone`}
+              fluid={image.mockupmarkImage.childImageSharp.fluid}
+            />
           </Col>
         </Row>
       </Container>

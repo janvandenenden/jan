@@ -4,31 +4,54 @@ import { Link } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import { Github, Linkedin } from "react-bootstrap-icons";
+
+if (typeof window !== `undefined`) {
+  let prevScrollPos = window.pageYOffset;
+  window.onscroll = () => {
+    console.log("scrolling");
+    let currentScrollPos = global.pageYOffset;
+    if (prevScrollPos > currentScrollPos || currentScrollPos <= 56) {
+      document.getElementsByClassName("navbar")[0].style.top = "0";
+    } else {
+      document.getElementsByClassName("navbar")[0].style.top = "-56px";
+    }
+    prevScrollPos = currentScrollPos;
+  };
+}
 
 const Navigation = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
+    <Navbar
+      bg="primary"
+      variant="dark"
+      expand="lg"
+      fixed="top"
+      style={{ transition: "top 0.5s" }}
+    >
       <Container>
         <Link to="/" className="navbar-brand text-light">
           Jan Van den Enden
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Link to="/projects" className="nav-link text-light">
-              Projects
-            </Link>
-            <Link to="/about" className="nav-link text-light">
-              About
-            </Link>
-            <Link to="/contact" className="nav-link text-light">
-              Contact
-            </Link>
-            <Link to="/resume" className="nav-link text-light">
-              Resume
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
+
+        <Nav className="ml-auto">
+          <a
+            href="https://github.com/janvandenenden"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link"
+          >
+            <Github color="#ffffff" size={36} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jan-van-den-enden-410b7820/"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link d-inline"
+          >
+            <Linkedin color="#ffffff" size={36} />
+          </a>
+        </Nav>
       </Container>
     </Navbar>
   );

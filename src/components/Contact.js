@@ -74,7 +74,13 @@ const Contact = () => {
                 <Form.Control as="textarea" rows={8} />
               </Form.Group>
 
-              <Button variant="info" size="lg" type="submit">
+              <Button
+                variant="info"
+                size="lg"
+                block
+                type="submit"
+                className="text-light"
+              >
                 Send message
               </Button>
             </Form>

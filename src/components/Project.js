@@ -19,7 +19,6 @@ const Project = ({ data, image }) => {
         <Img
           alt={`Mockup of ${data.title} website on macbook and Iphone`}
           fluid={image}
-          className="rounded"
         />
       </Col>
       <Col
@@ -29,23 +28,13 @@ const Project = ({ data, image }) => {
       >
         <h2>{data.title}</h2>
         <div>
-          {" "}
           <p className="d-inline mr-2">{data.description}</p>
           <Link to={data.link} className="mt-3 text-info mr-2">
-            Learn More
+            Learn More <ArrowRight color="#fca311" size={24} />
           </Link>
         </div>
 
         <Badges technology={data.technology} />
-
-        <a
-          href={data.website}
-          target="_blank"
-          rel="noreferrer"
-          className="text-info"
-        >
-          Visit website <ArrowRight color="#fca311" size={24} />
-        </a>
       </Col>
     </Row>
   );
