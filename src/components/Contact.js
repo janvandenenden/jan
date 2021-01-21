@@ -57,21 +57,30 @@ const Contact = () => {
             xs={{ order: "first", span: 12 }}
             md={{ order: "last", span: 6 }}
           >
-            <Form className="p-3 bg-light rounded shadow">
+            <Form
+              className="p-3 bg-light rounded shadow"
+              name="Jan's contact form"
+              ata-netlify="true"
+            >
+              <input type="hidden" name="Jan's contact form" />
               <Form.Group controlId="formBasicInput">
                 <Form.Control placeholder="Name" />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control
+                  type="email"
+                  name="email"
+                  placeholder="Enter email"
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicCompany">
-                <Form.Control placeholder="Company (optional)" />
+                <Form.Control name="company" placeholder="Company (optional)" />
               </Form.Group>
 
               <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Control as="textarea" rows={8} />
+                <Form.Control name="message" as="textarea" rows={8} />
               </Form.Group>
 
               <Button

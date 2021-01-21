@@ -43,7 +43,7 @@ const MockupMark = (props) => {
             <Img
               alt={`Mockup of  website on macbook and Iphone`}
               className="rounded"
-              fixed={image.mockupmarkImage.childImageSharp.fixed}
+              fluid={image.mockupmarkImage.childImageSharp.fluid}
             />
           </Col>
         </Row>

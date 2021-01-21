@@ -14,7 +14,7 @@ if (typeof window !== `undefined`) {
     if (prevScrollPos > currentScrollPos || currentScrollPos <= 56) {
       document.getElementsByClassName("navbar")[0].style.top = "0";
     } else {
-      document.getElementsByClassName("navbar")[0].style.top = "-56px";
+      document.getElementsByClassName("navbar")[0].style.top = "-68px";
     }
     prevScrollPos = currentScrollPos;
   };
