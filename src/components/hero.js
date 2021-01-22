@@ -27,19 +27,19 @@ const Hero = () => {
   return (
     <BackgroundImage
       fluid={data.heroImage.childImageSharp.fluid}
-      style={{ backgroundPosition: "70% 80%" }}
+      style={{ height: `calc(100vh - 60px)`, backgroundPosition: "70% 80%" }}
     >
       <Jumbotron style={{ backgroundColor: "transparent" }}>
         <Container>
           <Row style={{ minHeight: "80vh" }}>
             <Col md={6} className="my-auto justify-content-center">
-              <h1 className="display-3 font-weight-bold text-primary">
-                Hi, <br class="d-md-none"></br>I am{" "}
-                <span className="font-weight-bolder">Jan</span>
+              <h1 className="display-3 font-weight-bold text-light">
+                Hi, <br className="d-md-none"></br>I am Jan
               </h1>
-              <p className="text-dark">
-                I'm a digital developer who likes to create gobsmacking websites
-                and awesome applications.
+              <p className="text-light font-weight-bold">
+                A Belgium based Digital Developer who strives to build immersive
+                and beautiful web applications through carefully crafted code
+                and user-centric design.
               </p>
 
               <Link

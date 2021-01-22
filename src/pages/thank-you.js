@@ -7,14 +7,14 @@ import SEO from "../components/seo";
 
 const ThankYou = () => (
   <Layout>
-    <SEO title="Page not found - error 404" />
+    <SEO title="Thank you for your message" />
     <Jumbotron
       style={{ height: `calc(100vh - 116px)`, width: "100vw" }}
       className="d-flex flex-column justify-content-center my-0"
     >
       <div className="text-center">
-        <h1 className="my-5">Whoops - looks like something went wrong!</h1>
-
+        <h1>Thanks for your message!</h1>
+        <p>You are awesome</p>
         <Link to="/" className="btn btn-lg bg-info text-light mx-auto">
           Back to the homepage
         </Link>

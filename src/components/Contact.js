@@ -6,10 +6,6 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { Github, Linkedin, Instagram } from "react-bootstrap-icons";
-
-import Divider from "./Divider";
-
 const Contact = () => {
   return (
     <div className="py-5 bg-tertiary" id="contact">
@@ -24,34 +20,11 @@ const Contact = () => {
             md={{ order: "first", span: 6 }}
             className="d-flex flex-column justify-content-center mt-5 mt-md-0"
           >
-            <p className="lead">
-              I am looking for a job as a front-end developer and/or digital
-              project manager and/or data scientist.
+            <p className="lead">Interested in doing a project together?</p>
+            <p>
+              Currently I am accepting freelance work. I'd love to get coffee
+              and get to know you, so don’t hesitate to get in touch.
             </p>
-            <Divider text="or contact me on" />
-            <div className="d-flex justify-content-around mt-3">
-              <a
-                href="https://github.com/janvandenenden"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github color="#14213d" size={56} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jan-van-den-enden-410b7820/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Linkedin color="#14213d" size={56} />
-              </a>
-              <a
-                href="https://www.instagram.com/janvandenenden/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Instagram color="#14213d" size={56} />
-              </a>
-            </div>
           </Col>
           <Col
             xs={{ order: "first", span: 12 }}
@@ -62,6 +35,7 @@ const Contact = () => {
               method="POST"
               name="Jan's contact form"
               data-netlify="true"
+              action="/thank-you"
             >
               <input
                 type="hidden"
