@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import Container from "react-bootstrap/Container";
+import Fade from "react-reveal/Fade";
 
 import Project from "./Project";
 
@@ -59,14 +60,18 @@ const Projects = () => {
         <p className="text-center small text-primary ">
           Things I have been working on recently
         </p>
-        <Project
-          data={ProjectInformation.mockupmark}
-          image={image.mockupmarkImage.childImageSharp.fluid}
-        />
-        <Project
-          data={ProjectInformation.supermeme}
-          image={image.supermemeImage.childImageSharp.fluid}
-        />
+        <Fade left>
+          <Project
+            data={ProjectInformation.mockupmark}
+            image={image.mockupmarkImage.childImageSharp.fluid}
+          />
+        </Fade>
+        <Fade right>
+          <Project
+            data={ProjectInformation.supermeme}
+            image={image.supermemeImage.childImageSharp.fluid}
+          />
+        </Fade>
       </Container>
     </div>
   );

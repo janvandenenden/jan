@@ -11,20 +11,9 @@ import Layout from "../components/layout";
 
 const MockupMark = (props) => {
   const images = useStaticQuery(graphql`
-    query projectImage {
-      mockupmarkImage: file(relativePath: { eq: "mockup-mark.png" }) {
-        id
-        childImageSharp {
-          fixed(width: 800) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+    query supermemeImages {
       mockupmarkExampleImage: file(
-        relativePath: { eq: "mockup-mark-example-mockup.jpg" }
+        relativePath: { eq: "supermeme-example.jpg" }
       ) {
         id
         childImageSharp {
@@ -37,7 +26,7 @@ const MockupMark = (props) => {
         }
       }
       mockupmarkExampleImage2: file(
-        relativePath: { eq: "mockup-mark-example-mockup-2.jpg" }
+        relativePath: { eq: "supermeme-example-2.jpg" }
       ) {
         id
         childImageSharp {
@@ -50,7 +39,7 @@ const MockupMark = (props) => {
         }
       }
       mockupmarkExampleImage3: file(
-        relativePath: { eq: "mockup-mark-example-mockup-3.jpg" }
+        relativePath: { eq: "supermeme-example-3.jpg" }
       ) {
         id
         childImageSharp {
@@ -63,7 +52,7 @@ const MockupMark = (props) => {
         }
       }
       mockupmarkExampleImage4: file(
-        relativePath: { eq: "mockup-mark-example-mockup-4.jpg" }
+        relativePath: { eq: "supermeme-example-4.jpg" }
       ) {
         id
         childImageSharp {
@@ -93,8 +82,9 @@ const MockupMark = (props) => {
               >
                 Supermeme
               </a>{" "}
-              is an Supreme style T-shirt generator built with Ruby and React.
-              It uses Stripe as a payment provider and is hosted on Heroku.
+              is an Supreme style T-shirt generator built with Ruby, React and
+              Sass. It uses Stripe as a payment provider and is hosted on
+              Heroku.
             </p>
           </Col>
         </Row>
@@ -140,33 +130,23 @@ const MockupMark = (props) => {
             lg={{ span: 7, order: 2 }}
             className="my-auto"
           >
-            <h4>Setting</h4>
+            <h4>Project</h4>
             <p>
-              E-commerce is on the grow and print-on-demand is even growing
-              faster. It has never been so easy to start your own clothing or
-              apparel brand as in 2021. The growing number of artists and
-              print-on-demand store owners want to spend time creating designs,
-              optimising their stores and building their audiences.
+              Supreme is popular street wear brand from New York. Its iconic box
+              logo has been voted the most powerful logo in the world in 2018.
+              You can find it on products ranging from Louis Vuitton hand bags
+              and pinball machines to nunchucks and even bricks. It’s fair to
+              say this simple, text-based logo has become a meme in recent
+              years.
             </p>
-            <h4>Opportunity</h4>
             <p>
-              For every design created, store owners need images to promote
-              their products on their website and social media. One way to
-              obtain images is to organise a photoshoot, but this comes with a
-              considerable price tag and is not feasible for everyone. Those who
-              know how to Photoshop can create their own mockups (but often end
-              up searching hours for photos that fit their brand to subsequently
-              edit them and insert their designs).This approach works if you
-              have the knowhow and don’t need to create many mockups, but
-              remains a frustrating and time consuming process…
-            </p>
-            <h4>Solution</h4>
-            <p>
-              Wouldn’t it be great if you can just upload your design in your
-              browser, apply it to hundreds of curated images and download your
-              mockups in seconds? That’s exactly what you can do with Mockup
-              Mark: effortlessly create beautiful apparel mockup images in
-              seconds!
+              From time to time I saw people wearing Supreme T-shirts with
+              custom text in the red box logo. I figured it would be fun to
+              create a website where anyone can create T-shirts with unique text
+              in the Supreme box logo style. Supermeme lets users enter text (up
+              to 24 characters) and shows a preview of the design. Users can
+              order a white or black T-shirt with their design which is printed
+              on demand and delivered to their door.
             </p>
           </Col>
         </Row>

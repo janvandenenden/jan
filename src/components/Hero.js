@@ -30,7 +30,7 @@ const Hero = () => {
       style={{
         height: `calc(100vh - 60px)`,
         position: "relative",
-        backgroundPosition: "bottom left",
+        backgroundPosition: "bottom right",
       }}
     >
       <Jumbotron style={{ backgroundColor: "transparent" }}>
@@ -41,7 +41,7 @@ const Hero = () => {
                 Hi, <br className="d-md-none"></br>I am Jan
               </h1>
               <p className="text-light font-weight-bold">
-                A Belgium based Digital Developer who strives to build immersive
+                A Belgium based digital developer who strives to build immersive
                 and beautiful web applications through carefully crafted code
                 and user-centric design.
               </p>
@@ -65,7 +65,7 @@ const Hero = () => {
         >
           <path
             d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            class="shape-fill"
+            className="shape-fill"
           ></path>
         </svg>
       </div>

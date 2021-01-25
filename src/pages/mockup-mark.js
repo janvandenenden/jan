@@ -12,17 +12,6 @@ import Layout from "../components/layout";
 const MockupMark = (props) => {
   const images = useStaticQuery(graphql`
     query MockupMarkImages {
-      mockupmarkImage: file(relativePath: { eq: "mockup-mark.png" }) {
-        id
-        childImageSharp {
-          fixed(width: 800) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       mockupmarkExampleImage: file(
         relativePath: { eq: "mockup-mark-example-mockup.jpg" }
       ) {
@@ -141,7 +130,7 @@ const MockupMark = (props) => {
             lg={{ span: 7, order: 2 }}
             className="my-auto"
           >
-            <h4>Setting</h4>
+            <h4>Opportunity</h4>
             <p>
               E-commerce is on the grow and print-on-demand is even growing
               faster. It has never been so easy to start your own clothing or
@@ -149,7 +138,6 @@ const MockupMark = (props) => {
               print-on-demand store owners want to spend time creating designs,
               optimising their stores and building their audiences.
             </p>
-            <h4>Opportunity</h4>
             <p>
               For every design created, store owners need images to promote
               their products on their website and social media. One way to
