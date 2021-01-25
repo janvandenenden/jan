@@ -11,7 +11,7 @@ import Layout from "../components/layout";
 
 const MockupMark = (props) => {
   const images = useStaticQuery(graphql`
-    query MockupMarkImages {
+    query projectImage {
       mockupmarkImage: file(relativePath: { eq: "mockup-mark.png" }) {
         id
         childImageSharp {
@@ -77,25 +77,24 @@ const MockupMark = (props) => {
       }
     }
   `);
+
   return (
     <Layout>
       <Container>
         <Row className="pt-5">
           <Col>
-            <h1 className="display-4">Mockup Mark</h1>
+            <h1 className="display-4">Supermeme</h1>
             <p className="lead">
               <a
-                href="https://mockupmark.com"
+                href="https://supermeme.co"
                 target="_blank"
                 rel="noreferrer"
                 className="text-info"
               >
-                Mockup Mark
+                Supermeme
               </a>{" "}
-              is an apparel mockup generator built with React.js, Node.js, Sass
-              and ImageMagick. It uses Stripe as a payment provider and is
-              hosted on Heroku (web server) and Amazon Web Services (image
-              generation).
+              is an Supreme style T-shirt generator built with Ruby and React.
+              It uses Stripe as a payment provider and is hosted on Heroku.
             </p>
           </Col>
         </Row>

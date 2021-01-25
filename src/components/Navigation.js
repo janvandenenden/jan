@@ -38,17 +38,17 @@ const Navigation = () => {
             href="https://github.com/janvandenenden"
             target="_blank"
             rel="noreferrer"
-            className="nav-link ml-2"
+            className="nav-link ml-2 text-light"
           >
-            <Github color="#ffffff" size={28} />
+            <Github size={28} />
           </a>
           <a
             href="https://www.linkedin.com/in/jan-van-den-enden-410b7820/"
             target="_blank"
             rel="noreferrer"
-            className="nav-link ml-2"
+            className="nav-link ml-2 text-light"
           >
-            <Linkedin color="#ffffff" size={28} />
+            <Linkedin size={28} />
           </a>
         </Nav>
       </Container>

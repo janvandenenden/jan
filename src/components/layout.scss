@@ -33,26 +33,42 @@ h1 {
   font-weight: 900;
 }
 
-.custom-shape-divider-bottom-1610988694 {
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+// Dividers
+
+.divider-bottom,
+.divider-top {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  border-left-width: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
 }
 
-.custom-shape-divider-bottom-1610988694 svg {
+.divider-bottom {
+  bottom: 0%;
+}
+
+.divider-top {
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.divider-bottom svg,
+.divider-top svg {
   position: relative;
   display: block;
-  width: calc(132% + 1.3px);
-  height: 54px;
+  width: calc(110% + 1.3px);
+  height: 40px;
 }
 
-.custom-shape-divider-bottom-1610988694 .shape-fill {
-  fill: $primary-color;
-}
-
-.opacity {
-  opacity: 0.4;
+.divider-bottom .shape-fill,
+.divider-top .shape-fill {
+  fill: $secondary-color;
 }

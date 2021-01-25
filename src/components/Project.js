@@ -30,7 +30,7 @@ const Project = ({ data, image }) => {
         <div>
           <p className="d-inline mr-2">{data.description}</p>
           <Link to={data.link} className="mt-3 text-info mr-2">
-            Learn More <ArrowRight color="#fca311" size={24} />
+            Learn More <ArrowRight size={24} />
           </Link>
         </div>
 
