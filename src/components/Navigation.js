@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -30,9 +30,14 @@ const Navigation = () => {
       style={{ transition: "top 0.5s" }}
     >
       <Container>
-        <Link to="/" className="navbar-brand text-light">
+        <AniLink
+          to="/"
+          paintDrip
+          hex="#14213d"
+          className="navbar-brand text-light"
+        >
           Jan Van den Enden
-        </Link>
+        </AniLink>
         <Nav className="ml-auto flex-row">
           <a
             href="https://github.com/janvandenenden"

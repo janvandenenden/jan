@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import Img from "gatsby-image";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -29,9 +29,14 @@ const Project = ({ data, image }) => {
         <h2>{data.title}</h2>
         <div>
           <p className="d-inline mr-2">{data.description}</p>
-          <Link to={data.link} className="mt-3 text-info mr-2">
+          <AniLink
+            paintDrip
+            hex="#14213d"
+            to={data.link}
+            className="mt-3 text-info mr-2"
+          >
             Learn More <ArrowRight size={24} />
-          </Link>
+          </AniLink>
         </div>
 
         <Badges technology={data.technology} />
