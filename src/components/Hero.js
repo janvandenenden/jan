@@ -28,15 +28,20 @@ const Hero = () => {
     <BackgroundImage
       fluid={data.heroImage.childImageSharp.fluid}
       style={{
-        height: `calc(100vh - 60px)`,
         position: "relative",
-        backgroundPosition: "bottom right",
+        backgroundPosition: "bottom center",
       }}
     >
-      <Jumbotron style={{ backgroundColor: "transparent" }}>
+      <Jumbotron
+        style={{
+          backgroundColor: "transparent",
+          height: "100%",
+          overflow: "hidden",
+        }}
+      >
         <Container>
           <Row style={{ minHeight: "80vh" }}>
-            <Col md={6} className="my-auto justify-content-center">
+            <Col lg={7} className="my-auto justify-content-center">
               <h1 className="display-3 font-weight-bold text-light">
                 Hi, <br className="d-md-none"></br>I am Jan
               </h1>
