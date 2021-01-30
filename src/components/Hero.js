@@ -1,11 +1,37 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
+import styled from "styled-components";
 
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
+import Divider from "./Divider";
+
+const HeroBackgroundImage = styled(BackgroundImage)`
+  position: relative;
+  width: 100%;
+  background-position: bottom center !important;
+  opacity: 1 !important;
+  background: linear-gradient(
+    48deg,
+    rgba(20, 32, 61, 0.75) 50.33%,
+    rgba(252, 163, 17, 0.6) 100.89%
+  );
+  background-size: cover;
+`;
+
+const HeroContent = styled(Jumbotron)`
+  background-color: transparent;
+  height: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -13,34 +39,19 @@ const Hero = () => {
       heroImage: file(relativePath: { eq: "hero-3.jpg" }) {
         id
         childImageSharp {
-          fluid(
-            maxWidth: 2400
-            duotone: { highlight: "#e5e5e5", shadow: "#14213d" }
-            toFormat: PNG
-          ) {
+          fluid(maxWidth: 2400) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
+
   return (
-    <BackgroundImage
-      fluid={data.heroImage.childImageSharp.fluid}
-      style={{
-        position: "relative",
-        backgroundPosition: "bottom center",
-      }}
-    >
-      <Jumbotron
-        style={{
-          backgroundColor: "transparent",
-          height: "100%",
-          overflow: "hidden",
-        }}
-      >
+    <HeroBackgroundImage fluid={data.heroImage.childImageSharp.fluid}>
+      <HeroContent>
         <Container>
-          <Row style={{ minHeight: "80vh" }}>
+          <Row>
             <Col lg={7} className="my-auto justify-content-center">
               <h1 className="display-3 font-weight-bold text-light">
                 Hi, <br className="d-md-none"></br>I am Jan
@@ -60,21 +71,9 @@ const Hero = () => {
             </Col>
           </Row>
         </Container>
-      </Jumbotron>
-      <div className="divider-bottom">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            className="shape-fill"
-          ></path>
-        </svg>
-      </div>
-    </BackgroundImage>
+      </HeroContent>
+      <Divider position="bottom" />
+    </HeroBackgroundImage>
   );
 };
 
