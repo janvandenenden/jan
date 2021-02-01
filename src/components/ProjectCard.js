@@ -8,7 +8,7 @@ import { ArrowRight } from "react-bootstrap-icons";
 
 import Badges from "./Badges";
 
-const Project = ({ data, image }) => {
+const ProjectCard = ({ data, image }) => {
   return (
     <Row className="my-5 py-4 px-3 bg-light rounded shadow mx-1 mx-md-0">
       <Col
@@ -45,4 +45,4 @@ const Project = ({ data, image }) => {
   );
 };
 
-export default Project;
+export default ProjectCard;

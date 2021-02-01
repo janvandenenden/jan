@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Container from "react-bootstrap/Container";
 import Fade from "react-reveal/Fade";
 
-import Project from "./Project";
+import ProjectCard from "./ProjectCard";
 
 const ProjectInformation = {
   mockupmark: {
@@ -61,13 +61,13 @@ const Projects = () => {
           Things I have been working on recently
         </p>
         <Fade left>
-          <Project
+          <ProjectCard
             data={ProjectInformation.mockupmark}
             image={image.mockupmarkImage.childImageSharp.fluid}
           />
         </Fade>
         <Fade right>
-          <Project
+          <ProjectCard
             data={ProjectInformation.supermeme}
             image={image.supermemeImage.childImageSharp.fluid}
           />

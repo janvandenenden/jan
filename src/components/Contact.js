@@ -3,8 +3,8 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -30,48 +30,7 @@ const Contact = () => {
             xs={{ order: "first", span: 12 }}
             md={{ order: "last", span: 6 }}
           >
-            <Form
-              className="p-3 bg-light rounded shadow"
-              method="POST"
-              name="Jan's contact form"
-              data-netlify="true"
-              action="/thank-you"
-            >
-              <input
-                type="hidden"
-                name="form-name"
-                value="Jan's contact form"
-              />
-              <Form.Group controlId="formBasicInput">
-                <Form.Control placeholder="Name" />
-              </Form.Group>
-
-              <Form.Group controlId="formBasicEmail">
-                <Form.Control
-                  type="email"
-                  name="email"
-                  placeholder="Enter email"
-                />
-              </Form.Group>
-
-              <Form.Group controlId="formBasicCompany">
-                <Form.Control name="company" placeholder="Company (optional)" />
-              </Form.Group>
-
-              <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Control name="message" as="textarea" rows={8} />
-              </Form.Group>
-
-              <Button
-                variant="info"
-                size="lg"
-                block
-                type="submit"
-                className="text-light"
-              >
-                Send message
-              </Button>
-            </Form>
+            <ContactForm />
           </Col>
         </Row>
       </Container>
