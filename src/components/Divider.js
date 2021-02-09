@@ -1,8 +1,33 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledDivider = styled.div`
+  position: absolute;
+  border-left-width: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  top: ${(props) => (props.position === "top" ? 0 : "")};
+  bottom: ${(props) => (props.position === "bottom" ? 0 : "")};
+  transform: ${(props) => (props.position === "top" ? "rotate(180deg)" : "")};
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(110% + 1.3px);
+    height: 40px;
+
+    path {
+      &.shape-fill {
+        fill: #e3ebeb;
+      }
+    }
+  }
+`;
 
 const Divider = ({ position }) => {
   return (
-    <div className={`divider-${position}`}>
+    <StyledDivider position={position}>
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +39,7 @@ const Divider = ({ position }) => {
           className="shape-fill"
         ></path>
       </svg>
-    </div>
+    </StyledDivider>
   );
 };
 

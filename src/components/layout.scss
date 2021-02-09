@@ -39,36 +39,3 @@ a:hover {
 a:active {
   text-decoration: none;
 }
-
-// Dividers
-
-.divider-bottom,
-.divider-top {
-  position: absolute;
-  border-left-width: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.divider-bottom {
-  bottom: 0%;
-}
-
-.divider-top {
-  top: 0;
-  transform: rotate(180deg);
-}
-
-.divider-bottom svg,
-.divider-top svg {
-  position: relative;
-  display: block;
-  width: calc(110% + 1.3px);
-  height: 40px;
-}
-
-.divider-bottom .shape-fill,
-.divider-top .shape-fill {
-  fill: $secondary-color;
-}
