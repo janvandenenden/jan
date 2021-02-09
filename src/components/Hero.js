@@ -54,7 +54,7 @@ const Hero = () => {
           <Row>
             <Col lg={7} className="my-auto justify-content-center">
               <h1 className="display-3 font-weight-bold text-light">
-                Hi, <br className="d-md-none"></br>I am Jan
+                Hi, <br className="d-md-none" />I am Jan
               </h1>
               <p className="text-light font-weight-bold">
                 A Belgium based digital developer who strives to build immersive
