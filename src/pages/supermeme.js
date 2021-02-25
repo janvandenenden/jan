@@ -9,7 +9,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 import Layout from "../components/layout";
 
-const MockupMark = (props) => {
+const Supermeme = (props) => {
   const images = useStaticQuery(graphql`
     query supermemeImages {
       mockupmarkExampleImage: file(
@@ -154,4 +154,4 @@ const MockupMark = (props) => {
     </Layout>
   );
 };
-export default MockupMark;
+export default Supermeme;

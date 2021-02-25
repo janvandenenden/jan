@@ -19,7 +19,7 @@ const StyledDivider = styled.div`
 
     path {
       &.shape-fill {
-        fill: #e3ebeb;
+        fill: #fdfffc;
       }
     }
   }

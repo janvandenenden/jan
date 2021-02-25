@@ -52,12 +52,10 @@ const Projects = () => {
     }
   `);
   return (
-    <div className="py-5 position-relative">
+    <div className="py-5 position-relative bg-light">
       <Container>
-        <h1 className="display-4 text-center mt-4 mb-2 text-primary">
-          Projects
-        </h1>
-        <p className="text-center small text-primary ">
+        <h1 className="display-4 text-center mt-4 mb-2 text-dark">Projects</h1>
+        <p className="text-center small text-dark ">
           Things I have been working on recently
         </p>
         <Fade left>

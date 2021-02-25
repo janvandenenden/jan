@@ -1,8 +1,8 @@
-$primary-color: #14213d;
-$secondary-color: #e3ebeb;
-$tertiary-color: #fca311;
-$light-color: #ffffff;
-$dark-color: #000000;
+$primary-color: #2ec4b6;
+$secondary-color: #e71d36;
+$tertiary-color: #ff9f1c;
+$light-color: #fdfffc;
+$dark-color: #011627;
 
 $theme-colors: (
   "primary": $primary-color,
@@ -20,9 +20,9 @@ html {
 }
 
 body {
-  font-family: "muli";
+  font-family: "futura";
   color: $dark-color;
-  background-color: $secondary-color;
+  background-color: $light-color;
 }
 
 .shadow {

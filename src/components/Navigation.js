@@ -23,19 +23,14 @@ if (typeof window !== `undefined`) {
 const Navigation = () => {
   return (
     <Navbar
-      bg="primary"
+      bg="dark"
       variant="dark"
       expand="lg"
       fixed="top"
       style={{ transition: "top 0.5s" }}
     >
       <Container>
-        <AniLink
-          to="/"
-          paintDrip
-          hex="#14213d"
-          className="navbar-brand text-light"
-        >
+        <AniLink to="/" paintDrip hex="#14213d" className="navbar-brand">
           Jan Van den Enden
         </AniLink>
         <Nav className="ml-auto flex-row">
@@ -43,7 +38,7 @@ const Navigation = () => {
             href="https://github.com/janvandenenden"
             target="_blank"
             rel="noreferrer"
-            className="nav-link ml-2 text-light"
+            className="nav-link ml-2"
           >
             <Github size={28} />
           </a>
@@ -51,7 +46,7 @@ const Navigation = () => {
             href="https://www.linkedin.com/in/jan-van-den-enden-410b7820/"
             target="_blank"
             rel="noreferrer"
-            className="nav-link ml-2 text-light"
+            className="nav-link ml-2"
           >
             <Linkedin size={28} />
           </a>
