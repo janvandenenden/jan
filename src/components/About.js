@@ -21,9 +21,6 @@ const AboutBackgroundImage = styled(BackgroundImage)`
   );
   background-size: cover;
   background-attachment: fixed;
-  @media (min-width: 768px) {
-    background-position: 0% 0% !important;
-  }
 `;
 
 const About = () => {

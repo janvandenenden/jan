@@ -21,9 +21,6 @@ const HeroBackgroundImage = styled(BackgroundImage)`
   );
   background-size: cover;
   background-attachment: fixed;
-  @media (min-width: 768px) {
-    background-position: 0% 0% !important;
-  }
 `;
 
 const HeroContent = styled(Jumbotron)`
@@ -51,7 +48,7 @@ const Hero = () => {
       mobileImage: file(relativePath: { eq: "hero-4-mobile.jpg" }) {
         id
         childImageSharp {
-          fluid(maxWidth: 2400) {
+          fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid
           }
         }
