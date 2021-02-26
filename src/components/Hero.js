@@ -13,16 +13,16 @@ import Divider from "./Divider";
 const HeroBackgroundImage = styled(BackgroundImage)`
   position: relative;
   width: 100%;
-  background-position: 60% 100% !important;
   opacity: 1 !important;
   background: linear-gradient(
     45deg,
     rgba(1, 22, 39, 0.9) 30.33%,
-    rgba(231, 29, 54, 0.75) 101.89%
+    rgba(255, 255, 255, 0.25) 101.89%
   );
   background-size: cover;
+  background-attachment: fixed;
   @media (min-width: 768px) {
-    background-position: -80% 80% !important;
+    background-position: 0% 0% !important;
   }
 `;
 
@@ -46,9 +46,17 @@ const HeroContent = styled(Jumbotron)`
 `;
 
 const Hero = () => {
-  const data = useStaticQuery(graphql`
-    query Hero {
-      heroImage: file(relativePath: { eq: "hero-3.png" }) {
+  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+    query {
+      mobileImage: file(relativePath: { eq: "hero-4-mobile.jpg" }) {
+        id
+        childImageSharp {
+          fluid(maxWidth: 2400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      desktopImage: file(relativePath: { eq: "hero-4-copy.jpg" }) {
         id
         childImageSharp {
           fluid(maxWidth: 2400) {
@@ -59,8 +67,16 @@ const Hero = () => {
     }
   `);
 
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 576px)`,
+    },
+  ];
+
   return (
-    <HeroBackgroundImage fluid={data.heroImage.childImageSharp.fluid}>
+    <HeroBackgroundImage fluid={sources}>
       <HeroContent>
         <Container>
           <Row>
@@ -69,7 +85,7 @@ const Hero = () => {
                 Howdy! 👋
                 <br />I am Jan
               </h1>
-              <p className="text-light lead font-weight-thin text-uppercase">
+              <p className="text-light font-weight-thin">
                 A Belgium based digital developer who strives to build immersive
                 and beautiful web applications through carefully crafted code
                 and user-centric design.
@@ -79,6 +95,7 @@ const Hero = () => {
                 Get in touch
               </Link>
             </Col>
+            <Col></Col>
           </Row>
         </Container>
       </HeroContent>

@@ -10,7 +10,7 @@ import Badges from "./Badges";
 
 const ProjectCard = ({ data, image }) => {
   return (
-    <Row className="my-5 py-4 px-3 bg-light rounded shadow mx-1 mx-md-0">
+    <Row className="my-5 py-4 px-3 bg-light rounded border border-dark shadow mx-1 mx-md-0">
       <Col
         xs={{ span: 12, order: 1 }}
         md={{ span: 6, order: 1 }}
@@ -26,12 +26,12 @@ const ProjectCard = ({ data, image }) => {
         md={{ span: 6, order: 2 }}
         className="d-flex flex-column justify-content-center text-center text-md-left"
       >
-        <h2>{data.title}</h2>
+        <h2 className="font-weight-bold">{data.title}</h2>
         <div>
           <p className="d-inline mr-2">{data.description}</p>
           <AniLink
             paintDrip
-            hex="#14213d"
+            hex="#011627"
             to={data.link}
             className="mt-3 text-info mr-2"
           >

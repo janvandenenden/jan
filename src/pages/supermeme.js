@@ -12,7 +12,18 @@ import Layout from "../components/layout";
 const Supermeme = (props) => {
   const images = useStaticQuery(graphql`
     query supermemeImages {
-      mockupmarkExampleImage: file(
+      supermemeLogo: file(relativePath: { eq: "supermeme-logo.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 400) {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      supermemeExampleImage: file(
         relativePath: { eq: "supermeme-example.jpg" }
       ) {
         id
@@ -25,7 +36,7 @@ const Supermeme = (props) => {
           }
         }
       }
-      mockupmarkExampleImage2: file(
+      supermemeExampleImage2: file(
         relativePath: { eq: "supermeme-example-2.jpg" }
       ) {
         id
@@ -38,7 +49,7 @@ const Supermeme = (props) => {
           }
         }
       }
-      mockupmarkExampleImage3: file(
+      supermemeExampleImage3: file(
         relativePath: { eq: "supermeme-example-3.jpg" }
       ) {
         id
@@ -51,7 +62,7 @@ const Supermeme = (props) => {
           }
         }
       }
-      mockupmarkExampleImage4: file(
+      supermemeExampleImage4: file(
         relativePath: { eq: "supermeme-example-4.jpg" }
       ) {
         id
@@ -72,7 +83,55 @@ const Supermeme = (props) => {
       <Container>
         <Row className="pt-5">
           <Col>
-            <h1 className="display-4">Supermeme</h1>
+            <Img
+              alt={`Supermeme logo`}
+              fluid={images.supermemeLogo.childImageSharp.fluid}
+              className="mx-auto mb-5 d-block w-50"
+            />
+          </Col>
+        </Row>
+        <Row className="py-3 py-lg-5">
+          <Col
+            xs={{ span: 12, order: 2 }}
+            lg={{ span: 5, order: 1 }}
+            className="my-auto shadow"
+          >
+            <Carousel indicators="false">
+              <Carousel.Item>
+                <Img
+                  alt={`Example of mockup created with the Mockup Mark generator`}
+                  fluid={images.supermemeExampleImage.childImageSharp.fluid}
+                  className="d-block w-100 rounded"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Img
+                  alt={`Example of mockup created with the Mockup Mark generator`}
+                  fluid={images.supermemeExampleImage2.childImageSharp.fluid}
+                  className="d-block w-100 rounded"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Img
+                  alt={`Example of mockup created with the Mockup Mark generator`}
+                  fluid={images.supermemeExampleImage3.childImageSharp.fluid}
+                  className="d-block w-100 rounded"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <Img
+                  alt={`Example of mockup created with the Mockup Mark generator`}
+                  fluid={images.supermemeExampleImage4.childImageSharp.fluid}
+                  className="d-block w-100 rounded"
+                />
+              </Carousel.Item>
+            </Carousel>
+          </Col>
+          <Col
+            xs={{ span: 12, order: 1 }}
+            lg={{ span: 7, order: 2 }}
+            className="my-auto"
+          >
             <p className="lead">
               <a
                 href="https://supermeme.co"
@@ -86,50 +145,6 @@ const Supermeme = (props) => {
               Sass. It uses Stripe as a payment provider and is hosted on
               Heroku.
             </p>
-          </Col>
-        </Row>
-        <Row className="py-3 py-lg-5">
-          <Col
-            xs={{ span: 12, order: 2 }}
-            lg={{ span: 5, order: 1 }}
-            className="my-auto"
-          >
-            <Carousel indicators="false">
-              <Carousel.Item>
-                <Img
-                  alt={`Example of mockup created with the Mockup Mark generator`}
-                  fluid={images.mockupmarkExampleImage.childImageSharp.fluid}
-                  className="d-block w-100 rounded"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <Img
-                  alt={`Example of mockup created with the Mockup Mark generator`}
-                  fluid={images.mockupmarkExampleImage2.childImageSharp.fluid}
-                  className="d-block w-100 rounded"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <Img
-                  alt={`Example of mockup created with the Mockup Mark generator`}
-                  fluid={images.mockupmarkExampleImage3.childImageSharp.fluid}
-                  className="d-block w-100 rounded"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <Img
-                  alt={`Example of mockup created with the Mockup Mark generator`}
-                  fluid={images.mockupmarkExampleImage4.childImageSharp.fluid}
-                  className="d-block w-100 rounded"
-                />
-              </Carousel.Item>
-            </Carousel>
-          </Col>
-          <Col
-            xs={{ span: 12, order: 1 }}
-            lg={{ span: 7, order: 2 }}
-            className="my-auto"
-          >
             <h4>Project</h4>
             <p>
               Supreme is popular street wear brand from New York. Its iconic box

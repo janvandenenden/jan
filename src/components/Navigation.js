@@ -30,7 +30,7 @@ const Navigation = () => {
       style={{ transition: "top 0.5s" }}
     >
       <Container>
-        <AniLink to="/" paintDrip hex="#14213d" className="navbar-brand">
+        <AniLink to="/" paintDrip hex="#011627" className="navbar-brand">
           Jan Van den Enden
         </AniLink>
         <Nav className="ml-auto flex-row">

@@ -12,6 +12,17 @@ import Layout from "../components/layout";
 const MockupMark = (props) => {
   const images = useStaticQuery(graphql`
     query MockupMarkImages {
+      mockupmarkLogo: file(relativePath: { eq: "mockup-mark-logo.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 800) {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       mockupmarkExampleImage: file(
         relativePath: { eq: "mockup-mark-example-mockup.jpg" }
       ) {
@@ -71,7 +82,11 @@ const MockupMark = (props) => {
       <Container>
         <Row className="pt-5">
           <Col>
-            <h1 className="display-4">Mockup Mark</h1>
+            <Img
+              alt={`Mockup Mark logo`}
+              fluid={images.mockupmarkLogo.childImageSharp.fluid}
+              className="mx-auto mb-5 d-block w-50"
+            />
             <p className="lead">
               <a
                 href="https://mockupmark.com"
@@ -92,7 +107,7 @@ const MockupMark = (props) => {
           <Col
             xs={{ span: 12, order: 2 }}
             lg={{ span: 5, order: 1 }}
-            className="my-auto"
+            className="my-auto shadow"
           >
             <Carousel indicators="false">
               <Carousel.Item>
