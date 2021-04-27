@@ -38,13 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `roboto mono`,
-          `futura\:100,200,400,400i,700,700i`,
-          `Lora`,
-          `Archivo Black`,
-          `Muli`,
-        ],
+        fonts: [`futura\:100,200,400,400i,700,700i`, `Mulish`],
         display: "swap",
       },
     },

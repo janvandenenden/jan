@@ -21,6 +21,8 @@ const HeroBackgroundImage = styled(BackgroundImage)`
   );
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
 `;
 
 const HeroContent = styled(Jumbotron)`
@@ -48,7 +50,7 @@ const Hero = () => {
       mobileImage: file(relativePath: { eq: "hero-4-mobile.jpg" }) {
         id
         childImageSharp {
-          fluid(maxWidth: 700) {
+          fluid(maxWidth: 768) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -65,15 +67,19 @@ const Hero = () => {
   `);
 
   const sources = [
-    mobileImage.childImageSharp.fluid,
+    { ...mobileImage.childImageSharp.fluid, media: `(max-width: 768px)` },
     {
       ...desktopImage.childImageSharp.fluid,
-      media: `(min-width: 576px)`,
+      media: `(min-width: 768px)`,
     },
   ];
 
   return (
-    <HeroBackgroundImage fluid={sources}>
+    <HeroBackgroundImage
+      fluid={sources}
+      role="img"
+      preserveStackingContext={true}
+    >
       <HeroContent>
         <Container>
           <Row>
