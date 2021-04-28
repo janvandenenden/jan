@@ -9,7 +9,6 @@ import { Github, Linkedin } from "react-bootstrap-icons";
 if (typeof window !== `undefined`) {
   let prevScrollPos = window.pageYOffset;
   window.onscroll = () => {
-    console.log("scrolling");
     let currentScrollPos = global.pageYOffset;
     if (prevScrollPos > currentScrollPos || currentScrollPos <= 60) {
       document.getElementsByClassName("navbar")[0].style.top = "0";
