@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Karla:200,300`, `futura\:100,200,400,400i,700,700i`],
-        display: "swap",
+        fonts: [`Karla:200,300`],
+        display: `swap`,
       },
     },
     `gatsby-plugin-transition-link`,
