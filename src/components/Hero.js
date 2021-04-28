@@ -22,12 +22,13 @@ const HeroBackgroundImage = styled(BackgroundImage)`
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 80% 0%;
 `;
 
 const HeroContent = styled(Jumbotron)`
   background-color: transparent;
   height: 100%;
+  margin-bottom: 0;
   overflow: hidden;
   min-height: 100vh;
   display: flex;
@@ -39,22 +40,11 @@ const HeroContent = styled(Jumbotron)`
       color: #011627;
     }
   }
-  h1 {
-    line-height: 0.9;
-  }
 `;
 
 const Hero = () => {
-  const { mobileImage, desktopImage } = useStaticQuery(graphql`
+  const { desktopImage } = useStaticQuery(graphql`
     query {
-      mobileImage: file(relativePath: { eq: "hero-4-mobile.jpg" }) {
-        id
-        childImageSharp {
-          fluid(maxWidth: 768) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       desktopImage: file(relativePath: { eq: "hero-4-copy.jpg" }) {
         id
         childImageSharp {
