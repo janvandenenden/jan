@@ -8,7 +8,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <div className="py-5 bg-tertiary position-relative" id="contact">
+    <div className="py-5 position-relative" id="contact">
       <Container>
         <h1 className="display-4 mt-4 mb-2 text-center text-dark">Contact</h1>
         <p className="text-center small text-dark">
