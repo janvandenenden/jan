@@ -26,8 +26,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main style={{ marginTop: "60px" }}>{children}</main>
+      <Header
+        siteTitle={
+          data.site.siteMetadata?.title ||
+          `Jan Van den Enden | Digital Development`
+        }
+      />
+      <main>{children}</main>
       <Footer />
     </>
   );
