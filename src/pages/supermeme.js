@@ -80,7 +80,7 @@ const Supermeme = (props) => {
 
   return (
     <Layout>
-      <Container>
+      <Container style={{ marginTop: "60px" }}>
         <Row className="pt-5">
           <Col>
             <Img
@@ -94,7 +94,7 @@ const Supermeme = (props) => {
           <Col
             xs={{ span: 12, order: 2 }}
             lg={{ span: 5, order: 1 }}
-            className="my-auto shadow"
+            className="my-auto shadow p-0"
           >
             <Carousel indicators="false">
               <Carousel.Item>
