@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 
 import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const Supermeme = (props) => {
   const images = useStaticQuery(graphql`
@@ -80,6 +81,7 @@ const Supermeme = (props) => {
 
   return (
     <Layout>
+      <SEO title="Supermeme" />
       <Container style={{ marginTop: "60px" }}>
         <Row className="pt-5">
           <Col>
