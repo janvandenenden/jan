@@ -24,16 +24,16 @@ const ProjectCard = ({ data, image }) => {
       <Col
         xs={{ span: 12, order: 2 }}
         md={{ span: 6, order: 2 }}
-        className="d-flex flex-column justify-content-center text-center text-md-left"
+        className="d-flex flex-column justify-content-center"
       >
         <h2 className="font-weight-bold">{data.title}</h2>
         <div>
-          <p className="d-inline mr-2">{data.description}</p>
+          <p>{data.description}</p>
           <AniLink
             paintDrip
             hex="#011627"
             to={data.link}
-            className="mt-3 text-info mr-2"
+            className="pt-3 text-info"
           >
             Learn More <ArrowRight size={24} />
           </AniLink>
