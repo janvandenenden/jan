@@ -38,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`futura\:100,200,400,400i,700,700i`, `Mulish`],
+        fonts: [`Karla:200,300`, `futura\:100,200,400,400i,700,700i`],
         display: "swap",
       },
     },
