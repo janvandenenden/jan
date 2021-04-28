@@ -56,35 +56,24 @@ const Hero = () => {
     }
   `);
 
-  const sources = [
-    { ...mobileImage.childImageSharp.fluid, media: `(max-width: 768px)` },
-    {
-      ...desktopImage.childImageSharp.fluid,
-      media: `(min-width: 768px)`,
-    },
-  ];
-
   return (
-    <HeroBackgroundImage
-      fluid={sources}
-      role="img"
-      preserveStackingContext={true}
-    >
+    <HeroBackgroundImage fluid={desktopImage.childImageSharp.fluid}>
       <HeroContent>
         <Container>
           <Row>
             <Col lg={7} className="my-auto justify-content-center">
               <h1 className="display-3 font-weight-bold text-light pb-3">
-                Howdy! 👋
-                <br />I am Jan
+                Howdy,
+                <br className="d-md-none" /> I am Jan
               </h1>
-              <p className="text-light font-weight-thin">
-                A Belgium based digital developer who strives to build immersive
-                and beautiful web applications through carefully crafted code
-                and user-centric design.
+              <p className="text-light lead">
+                Digital development / UX & UI Design / Project Management
               </p>
 
-              <Link to="/#contact" className="btn btn-info btn-lg mt-2">
+              <Link
+                to="/#contact"
+                className="btn btn-info btn-lg mt-2 font-weight-bold"
+              >
                 Get in touch
               </Link>
             </Col>
