@@ -8,8 +8,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import Divider from "./Divider";
-
 const HeroBackgroundImage = styled(BackgroundImage)`
   position: relative;
   display: flex;
@@ -83,7 +81,6 @@ const Hero = () => {
           </Row>
         </Container>
       </HeroContent>
-      <Divider position="bottom" />
     </HeroBackgroundImage>
   );
 };

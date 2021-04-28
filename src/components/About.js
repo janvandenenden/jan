@@ -8,8 +8,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import Divider from "./Divider";
-
 const AboutBackgroundImage = styled(BackgroundImage)`
   position: relative;
   width: 100%;
@@ -42,7 +40,6 @@ const About = () => {
       }
     }
   `);
-  console.log(data.aboutme);
   return (
     <AboutBackgroundImage fluid={data.aboutme.childImageSharp.fluid}>
       <div className="py-5 opacity-0 position-relative">
@@ -75,8 +72,6 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-        <Divider position="bottom" />
-        <Divider position="top" />
       </div>
     </AboutBackgroundImage>
   );
