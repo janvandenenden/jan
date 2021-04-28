@@ -12,6 +12,8 @@ import Divider from "./Divider";
 
 const HeroBackgroundImage = styled(BackgroundImage)`
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
   opacity: 1 !important;
   background: linear-gradient(
@@ -22,15 +24,15 @@ const HeroBackgroundImage = styled(BackgroundImage)`
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 80% 0%;
+  background-position: 80% 10%;
+  min-height: 100vh;
 `;
 
 const HeroContent = styled(Jumbotron)`
   background-color: transparent;
-  height: 100%;
+  width: 100%;
   margin-bottom: 0;
   overflow: hidden;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,9 +45,9 @@ const HeroContent = styled(Jumbotron)`
 `;
 
 const Hero = () => {
-  const { desktopImage } = useStaticQuery(graphql`
+  const { heroImage } = useStaticQuery(graphql`
     query {
-      desktopImage: file(relativePath: { eq: "hero-4-copy.jpg" }) {
+      heroImage: file(relativePath: { eq: "hero-4-copy.jpg" }) {
         id
         childImageSharp {
           fluid(maxWidth: 2400) {
@@ -57,22 +59,22 @@ const Hero = () => {
   `);
 
   return (
-    <HeroBackgroundImage fluid={desktopImage.childImageSharp.fluid}>
+    <HeroBackgroundImage fluid={heroImage.childImageSharp.fluid}>
       <HeroContent>
         <Container>
           <Row>
             <Col lg={7} className="my-auto justify-content-center">
               <h1 className="display-3 font-weight-bold text-light pb-3">
                 Howdy,
-                <br className="d-md-none" /> I am Jan
+                <br className="d-md-none" />I am Jan
               </h1>
-              <p className="text-light lead">
+              <p className="text-light lead pb-3">
                 Digital development / UX & UI Design / Project Management
               </p>
 
               <Link
                 to="/#contact"
-                className="btn btn-info btn-lg mt-2 font-weight-bold"
+                className="btn btn-info btn-lg font-weight-bold"
               >
                 Get in touch
               </Link>
