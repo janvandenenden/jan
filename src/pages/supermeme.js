@@ -94,9 +94,10 @@ const Supermeme = (props) => {
         </Row>
         <Row className="py-3 py-lg-5">
           <Col
-            xs={{ span: 12, order: 2 }}
+            xs={{ span: 11, order: 2 }}
+            s={{ span: 12, order: 2 }}
             lg={{ span: 5, order: 1 }}
-            className="my-auto shadow p-0"
+            className="mt-4 my-lg-auto shadow px-0 mx-auto"
           >
             <Carousel indicators={false}>
               <Carousel.Item>
@@ -132,7 +133,7 @@ const Supermeme = (props) => {
           <Col
             xs={{ span: 12, order: 1 }}
             lg={{ span: 7, order: 2 }}
-            className="my-auto"
+            className="my-auto pl-lg-5"
           >
             <p className="lead">
               <a
