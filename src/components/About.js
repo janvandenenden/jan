@@ -18,7 +18,6 @@ const AboutBackgroundImage = styled(BackgroundImage)`
     rgba(255, 255, 255, 0.25) 101.89%
   );
   background-size: cover;
-  background-attachment: fixed;
 `;
 
 const About = () => {
@@ -42,7 +41,7 @@ const About = () => {
   `);
   return (
     <AboutBackgroundImage fluid={data.aboutme.childImageSharp.fluid}>
-      <div className="py-5 opacity-0 position-relative">
+      <div className="py-5">
         <Container>
           <Row className="my-5 bg-light rounded text-dark shadow mx-1 mx-md-0">
             <Col
