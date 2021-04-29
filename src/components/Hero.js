@@ -8,9 +8,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import { ChevronDown } from "react-bootstrap-icons";
+
 const HeroContent = styled(Jumbotron)`
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
   margin-bottom: 0;
   overflow: hidden;
   display: flex;
@@ -44,27 +46,32 @@ const Hero = () => {
   `);
 
   return (
-    <BackgroundImage fluid={heroImage.childImageSharp.fluid}>
-      <HeroContent>
+    <BackgroundImage
+      fluid={heroImage.childImageSharp.fluid}
+      style={{ marginTop: "60px" }}
+    >
+      <HeroContent fluid>
         <Container>
           <Row>
-            <Col lg={7} className="my-auto justify-content-center">
-              <h1 className="display-3 font-weight-bold text-light pb-3">
-                Howdy,
-                <br className="d-md-none" />I am Jan
+            <Col xs={10} md={8} lg={6} className="my-auto">
+              <h1 className="text-light font-weight-bold pb-3">
+                Digital Developer
               </h1>
-              <p className="text-light lead pb-3">
-                Digital development / UX & UI Design / Project Management
+              <p className="lead font-weight-bold text-light pb-3">
+                Howdy, I am Jan <span>👋</span>
+                <br />
+                Belgium based web developer building immersive and beautiful web
+                applications through carefully crafted code and user-centric
+                design.
               </p>
 
               <Link
                 to="/#contact"
                 className="btn btn-info btn-lg font-weight-bold"
               >
-                Get in touch
+                Get in touch <ChevronDown size="18" />
               </Link>
             </Col>
-            <Col></Col>
           </Row>
         </Container>
       </HeroContent>
