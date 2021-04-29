@@ -60,9 +60,8 @@ const Hero = () => {
               <p className="lead font-weight-bold text-light pb-3">
                 Howdy, I am Jan <span>👋</span>
                 <br />
-                Belgium based web developer building immersive and beautiful web
-                applications through carefully crafted code and user-centric
-                design.
+                Belgium based web developer building immersive web applications
+                through carefully crafted code and user-centric design
               </p>
 
               <Link
