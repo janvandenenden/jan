@@ -111,7 +111,7 @@ const MockupMark = (props) => {
             lg={{ span: 5, order: 1 }}
             className="my-auto shadow p-0"
           >
-            <Carousel indicators="false">
+            <Carousel indicators={false}>
               <Carousel.Item>
                 <Img
                   alt={`Example of mockup created with the Mockup Mark generator`}
